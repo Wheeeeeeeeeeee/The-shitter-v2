@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bathroom Status</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .occupied {
+            background-color: red;
+            color: white;
+            padding: 50px;
+            font-size: 24px;
+        }
+
+        .available {
+            background-color: green;
+            color: white;
+            padding: 50px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="available" style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: green; color: white;">
+    <div id="bathroomStatus" style="padding: 50px; font-size: 24px;">
+        The turd deposit is available for public use.
+    </div>
+
+    <script>
+        // Insert logic here to check the status and update the text accordingly
+        // For example, if the turd deposit is not available, you can update the following line to change the text
+        var bathroomStatus = document.getElementById('bathroomStatus');
+        if(/* Logic to check unavailability of turd deposit */) {
+            document.body.classList.remove("available");
+            document.body.classList.add("occupied");
+            bathroomStatus.innerText = "The turd deposit is currently in use.";
+        }
+    </script>
+</body>
+</html>
